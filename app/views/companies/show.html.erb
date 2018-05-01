@@ -2,7 +2,9 @@
 
 <p>
   <strong>Logo :</strong>
-  <%= image_tag @company.logo.url %>
+  <%= image_tag @company.logo.url(:medium) %>
+  <%= @company.logo.url(:medium) %>
+
 </p>
 
 <p>
