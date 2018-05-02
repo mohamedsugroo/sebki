@@ -644,6 +644,8 @@ GEM
     ffi (1.9.23)
     font-awesome-sass (4.5.0)
       sass (>= 3.2)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.0.1)
@@ -795,6 +797,7 @@ DEPENDENCIES
   country_select
   devise
   font-awesome-sass
+  friendly_id (~> 5.1.0)
   impressionist
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)

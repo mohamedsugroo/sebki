@@ -18,6 +18,7 @@ class CompaniesController < ApplicationController
 
   def create
     @company = Company.new(company_params)
+    @company.user_id = current_user.id
 
     respond_to do |format|
       if @company.save
@@ -52,10 +53,10 @@ class CompaniesController < ApplicationController
 
   private
     def set_company
-      @company = Company.find(params[:id])
+      @company = Company.friendly.find(params[:id])
     end
 
     def company_params
-      params.require(:company).permit(:company_number, :name, :bio, :phone_number, :email, :logo)
+      params.require(:company).permit(:company_number, :name, :bio, :phone_number, :email, :logo, :slug, :user_id)
     end
 end
