@@ -1,5 +1,4 @@
-<p id="notice"><%= notice %></p>
-
+<div class="container">
 <h1>Companies</h1>
 
 <table>
@@ -22,9 +21,9 @@
         <td><%= company.bio %></td>
         <td><%= company.phone_number %></td>
         <td><%= company.email %></td>
-        <td><%#= link_to 'Show', company %></td>
-        <td><%#= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%#= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', company %></td>
+        <td><%= link_to 'Edit', edit_company_path(company) %></td>
+        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,3 +32,4 @@
 <br>
 
 <%= link_to 'New Company', new_company_path %>
+</div>
