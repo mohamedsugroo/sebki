@@ -1,36 +1,116 @@
-<p id="notice"><%= notice %></p>
+<div class="cover_space">
+  
+  <div class="container">
 
-<p>
-  <strong>Logo :</strong>
-  <%= image_tag @company.logo.url(:medium) %>
-  <%= @company.logo.url(:medium) %>
+    <div class="row">
+      <div class="col-md-2">
 
-</p>
+          <div class='company_avatar' style=" background-image: url(<%= @company.logo.url(:medium) %>);" > 
+          </div>
+      
+      </div>
 
-<p>
-  <strong>Company number:</strong>
-  <%= @company.company_number %>
-</p>
+      <div class="col-md-9">
+        
+        <ul class="inf_items">
+          <li class="list_item">
+            <strong>Company number:</strong> <br>
+            <%= @company.company_number %>
+          </li> 
 
-<p>
-  <strong>Name:</strong>
-  <%= @company.name %>
-</p>
 
-<p>
-  <strong>Bio:</strong>
-  <%= @company.bio %>
-</p>
+          <li class="list_item">
+            <strong>Name:</strong> <br>
+            <%= @company.name %>
+          </li> 
+        </ul>
 
-<p>
-  <strong>Phone number:</strong>
-  <%= @company.phone_number %>
-</p>
+      </div>
+    </div>
+  
+  </div>
+  
+</div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @company.email %>
-</p>
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<nav class="inpage_navbar">
+  <div class="container">
+    <ul class="subnav">
+      <a href="#"><li class="subnav_items">Why Join Us</li></a>
+      <a href="#"><li class="subnav_items">Jobs</li></a>
+      <a href="#"><li class="subnav_items">Reviews</li></a>
+      <a href="#"><li class="subnav_items">Q&A</li></a>
+
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class="wrapper">
+
+<div class="container">
+  
+  <div class="row">
+
+    <div class="col-md-3">
+
+      <div class="info_box">
+
+        <ul class="inf_items">
+          <li class="list_item">
+            <strong>Company number:</strong> <br>
+            <%= @company.company_number %>
+          </li> 
+
+
+          <li class="list_item">
+            <strong>Name:</strong> <br>
+            <%= @company.name %>
+          </li> 
+
+
+          <li class="list_item">
+            <strong>Phone number:</strong> <br>
+            <%= @company.phone_number %>
+          </li> 
+
+
+
+          <li class="list_item">
+            <strong>Email:</strong> <br>
+            <%= @company.email %>
+          </li>
+
+        </ul>
+
+
+        <div class="edit_company_user_only">
+          <%= link_to 'Edit', edit_company_path(@company) %> |
+          <%= link_to 'Back', companies_path %>
+        </div>
+
+      </div>
+
+    </div>  
+
+    <div class="col-md-9 p0">
+
+
+      <li class="list_item">
+        <strong>Bio:</strong> <br>
+        <%= @company.bio %>
+      </li> 
+
+      
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+</div>

@@ -17,13 +17,9 @@
       <div class="col">
 
         <ul class="nav_links text-right">
-            <li>
-              <%#= link_to'Sign In', sign_in_path  %>
-              <a  data-toggle="modal" data-target="#exampleModal"> Sign in</a>
-            </li>
-            <li><a href="<%= root_path %>"> Sign Up</a></li>
+            <li><a href="<%= sign_in_path %>"> Sign_in </a></li>
 
-          <%# if user_signed_in? %>
+          <% if user_signed_in? %>
 
 
           <label class="dropdown">
@@ -49,7 +45,7 @@
             </div>
           </label>
 
-          <%# end %>
+          <% end %>
           <a href="<%= root_path %>">
             <button  class="btn-purple-nav">
               Post a Job
