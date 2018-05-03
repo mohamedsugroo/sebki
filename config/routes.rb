@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 	
+  resources :blogs, path: '/press'
   devise_for :users
   resources :companies
   root 'home#index'
